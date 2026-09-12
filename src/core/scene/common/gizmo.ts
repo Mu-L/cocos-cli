@@ -74,8 +74,8 @@ export interface IGizmoService {
     selectAllLightProbes(): void;
     unselectAllLightProbes(): void;
     queryLightProbeSelectedCount(): number;
-    deleteSelectedLightProbes(): number;
-    duplicateSelectedLightProbes(): number;
+    deleteSelectedLightProbes(): Promise<number>;
+    duplicateSelectedLightProbes(): Promise<number>;
     generateLightProbes(): number;
     // 框选探针（方案 A）：上层框选时主动调用，屏幕矩形（left<right、bottom<top），additive 并入现有选中。返回选中总数。
     regionSelectLightProbes(left: number, right: number, top: number, bottom: number, additive: boolean): number;
